@@ -12,7 +12,7 @@
  "Every submission is a story of learning."
                ◉‿◉
 // Author      : vexlore
-// Created     : 2025-06-06
+// Created     : 09-06-2025 [15:01:39]
 // University  : Metropolitan University
 // Language    : C++
 */
@@ -70,28 +70,26 @@ int lcm(int a, int b)
     return (a / gcd(a, b)) * b;
 }
 
+void luckyNumber(int a)
+{
+    int count = 0;
+    while (a > 0)
+    {
+        int digit = a % 10;
+        if (digit == 4 || digit == 7)
+            count++;
+        a /= 10;
+    }
+    if (count == 4 || count == 7)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
+}
 signed main()
 {
     fastIO;
-    int n, k;
-    cin >> n >> k;
-
-    vector<int> a(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> a[i];
-    }
-
-    int threshold = a[k - 1], ans = 0;
-
-    for (int i = 0; i < n; i++)
-    {
-        if (a[i] >= threshold && a[i] > 0)
-        {
-            ans++;
-        }
-    }
-
-    cout << ans << endl;
+    int n;
+    cin >> n;
+    luckyNumber(n);
     return 0;
 }

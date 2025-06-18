@@ -1,12 +1,12 @@
-/*
-                 _
- __   _______  _| | ___  _ __ ___
+/*                 
+                 _                
+ __   _______  _| | ___  _ __ ___ 
  \ \ / / _ \ \/ / |/ _ \| '__/ _ \
   \ V /  __/>  <| | (_) | | |  __/
    \_/ \___/_/\_\_|\___/|_|  \___|
-
+                                  
             v e x l o r e
-
+               
  "Code like a poet, debug like a detective."
  "Crafted with passion and precision."
  "Every submission is a story of learning."
@@ -30,7 +30,7 @@ using namespace std;
 typedef long long d;
 typedef long double ld;
 typedef vector<int> vi;
-typedef pair<int, int> pii;
+typedef pair<int,int> pii;
 
 const int MOD = 1000000007;
 const int INF = 1000000000000000000LL;
@@ -73,25 +73,30 @@ int lcm(int a, int b)
 signed main()
 {
     fastIO;
-    int n, k;
-    cin >> n >> k;
+    string s;
+    cin >> s;
 
-    vector<int> a(n);
-    for (int i = 0; i < n; i++)
+    vector<char> nums;
+
+    for (char c : s)
     {
-        cin >> a[i];
-    }
-
-    int threshold = a[k - 1], ans = 0;
-
-    for (int i = 0; i < n; i++)
-    {
-        if (a[i] >= threshold && a[i] > 0)
+        if (c != '+')
         {
-            ans++;
+            nums.push_back(c);
         }
     }
 
-    cout << ans << endl;
+    sort(nums.begin(), nums.end());
+
+    for (int i = 0; i < nums.size(); i++)
+    {
+        cout << nums[i];
+        if (i != nums.size() - 1)
+        {
+            cout << '+';
+        }
+    }
+
+    cout << endl;
     return 0;
 }

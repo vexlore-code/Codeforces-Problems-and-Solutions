@@ -1,18 +1,18 @@
-/*
-                 _
- __   _______  _| | ___  _ __ ___
+/*                 
+                 _                
+ __   _______  _| | ___  _ __ ___ 
  \ \ / / _ \ \/ / |/ _ \| '__/ _ \
   \ V /  __/>  <| | (_) | | |  __/
    \_/ \___/_/\_\_|\___/|_|  \___|
-
+                                  
             v e x l o r e
-
+               
  "Code like a poet, debug like a detective."
  "Crafted with passion and precision."
  "Every submission is a story of learning."
                ◉‿◉
 // Author      : vexlore
-// Created     : 2025-06-06
+// Created     : 09-06-2025 [14:32:05]
 // University  : Metropolitan University
 // Language    : C++
 */
@@ -30,7 +30,7 @@ using namespace std;
 typedef long long d;
 typedef long double ld;
 typedef vector<int> vi;
-typedef pair<int, int> pii;
+typedef pair<int,int> pii;
 
 const int MOD = 1000000007;
 const int INF = 1000000000000000000LL;
@@ -73,25 +73,17 @@ int lcm(int a, int b)
 signed main()
 {
     fastIO;
-    int n, k;
-    cin >> n >> k;
-
-    vector<int> a(n);
-    for (int i = 0; i < n; i++)
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    int count = 0;
+    for (int i = 1; i < n; i++)
     {
-        cin >> a[i];
+        if (s[i] == s[i - 1])
+            count++;
     }
+    cout << count << endl;
 
-    int threshold = a[k - 1], ans = 0;
-
-    for (int i = 0; i < n; i++)
-    {
-        if (a[i] >= threshold && a[i] > 0)
-        {
-            ans++;
-        }
-    }
-
-    cout << ans << endl;
     return 0;
 }

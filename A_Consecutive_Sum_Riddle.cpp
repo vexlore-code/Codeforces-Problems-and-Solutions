@@ -12,7 +12,7 @@
  "Every submission is a story of learning."
                ◉‿◉
 // Author      : vexlore
-// Created     : 2025-06-06
+// Created     : 08-06-2025
 // University  : Metropolitan University
 // Language    : C++
 */
@@ -73,25 +73,27 @@ int lcm(int a, int b)
 signed main()
 {
     fastIO;
-    int n, k;
-    cin >> n >> k;
-
-    vector<int> a(n);
-    for (int i = 0; i < n; i++)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        cin >> a[i];
-    }
+        int n;
+        cin >> n;
 
-    int threshold = a[k - 1], ans = 0;
-
-    for (int i = 0; i < n; i++)
-    {
-        if (a[i] >= threshold && a[i] > 0)
+        for (int len = 2; len <= 1000000; ++len)
         {
-            ans++;
+            if ((2 * n) % len != 0) continue;
+
+            int s = (2 * n) / len;
+            int l = (s - len + 1) / 2;
+            int r = l + len - 1;
+
+            if (l < r)
+            {
+                cout << l << " " << r << endl;
+                break;
+            }
         }
     }
-
-    cout << ans << endl;
     return 0;
 }

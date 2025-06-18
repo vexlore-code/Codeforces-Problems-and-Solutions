@@ -12,7 +12,7 @@
  "Every submission is a story of learning."
                ◉‿◉
 // Author      : vexlore
-// Created     : 2025-06-06
+// Created     : 10-06-2025 [17:43:36]
 // University  : Metropolitan University
 // Language    : C++
 */
@@ -27,14 +27,33 @@ using namespace std;
 #define float long double
 #define endl '\n'
 
+// STL Type Aliases
 typedef long long d;
 typedef long double ld;
 typedef vector<int> vi;
+typedef vector<vi> vvi;
 typedef pair<int, int> pii;
+typedef vector<pii> vpi;
+typedef map<int, int> mii;
+typedef set<int> si;
+typedef multiset<int> msi;
+typedef unordered_map<int, int> umii;
+typedef unordered_set<int> usi;
+typedef priority_queue<int> maxheap;
+typedef priority_queue<int, vector<int>, greater<int>> minheap;
 
-const int MOD = 1000000007;
-const int INF = 1000000000000000000LL;
-const int N = 200005;
+// STL Macros
+#define pb push_back
+#define eb emplace_back
+#define F first
+#define S second
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define sz(x) (int)(x).size()
+
+const int MOD = 1e9 + 7;
+const int INF = 1e18;
+const int N = 2e5 + 5;
 
 int modPow(int base, int exp, int mod = MOD)
 {
@@ -73,25 +92,21 @@ int lcm(int a, int b)
 signed main()
 {
     fastIO;
-    int n, k;
-    cin >> n >> k;
-
-    vector<int> a(n);
-    for (int i = 0; i < n; i++)
+    int n, i;
+    cin >> n;
+    vi a(n);
+    for (i = 0; i < n; i++)
     {
         cin >> a[i];
     }
-
-    int threshold = a[k - 1], ans = 0;
-
+    vi b(n);
     for (int i = 0; i < n; i++)
     {
-        if (a[i] >= threshold && a[i] > 0)
-        {
-            ans++;
-        }
+        b[a[i] - 1] = i + 1;
     }
-
-    cout << ans << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << b[i] << " ";
+    }
     return 0;
 }
