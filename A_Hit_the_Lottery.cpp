@@ -32,8 +32,9 @@ typedef vector<pii> vpi;
 signed main()
 {
     fastIO;
-    int n, h100, t20, t10, f5, o1 , sum = 0;
+    int n, h100, t20, t10, f5, o1, sum = 0;
     cin >> n;
+
     h100 = n / 100;
     n = n % 100;
     t20 = n / 20;
@@ -43,7 +44,9 @@ signed main()
     f5 = n / 5;
     n %= 5;
     o1 = n / 1;
+
     sum = h100 + t20 + t10 + f5 + o1;
+
     cout << sum << endl;
 
     return 0;
