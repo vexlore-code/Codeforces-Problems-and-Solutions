@@ -47,14 +47,14 @@ signed main()
 
         cout << mx - mn << endl; */
 
-    for (int i = 0; i <= test - n; i++)
+/*     for (int i = 0; i <= test - n; i++)
     {
         d.push_back(a[i + n - 1] - a[i]);
     }
 
     int res = *min_element(d.begin(), d.end());
     cout << res << endl;
-
+ */
     return 0;
 }
 
