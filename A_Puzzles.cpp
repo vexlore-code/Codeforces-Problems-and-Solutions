@@ -42,19 +42,16 @@ signed main()
         cin >> a[i];
     }
 
-    /*     int mn = *min_element(a.begin(), a.begin() + n);
-        int mx = *max_element(a.begin(), a.begin() + n);
+    sort(a.begin(), a.end());
+    int md = INT_MAX;
 
-        cout << mx - mn << endl; */
-
-/*     for (int i = 0; i <= test - n; i++)
+    for (int i = 0; i <= test - n; i++)
     {
-        d.push_back(a[i + n - 1] - a[i]);
+        int d = a[i + n - 1] - a[i];
+        md = min(md, d);
     }
 
-    int res = *min_element(d.begin(), d.end());
-    cout << res << endl;
- */
+    cout << md << endl;
     return 0;
 }
 
