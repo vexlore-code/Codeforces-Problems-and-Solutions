@@ -37,9 +37,9 @@ signed main()
     }
 
     int smallest = arr[0];
-    int index_smallest = 0;
+    int index_smallest = 1;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         if (arr[i] < smallest)
         {
