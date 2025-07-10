@@ -1,7 +1,7 @@
 /*
  "La Ilaha Illallah Muhammadur Rasulullah"
  ╔═══════════════════════════════════════╗
-             ✦ v e x l o r e ✦         	   		Created	 : 10-07-2025  23:10:22
+             ✦ v e x l o r e ✦         	   		Created	 : 10-07-2025  23:48:04
    "Code like a poet. Debug like a pro." 		 GitHub  : https://github.com/vexlore-code
  ╚═══════════════════════════════════════╝
 */
@@ -27,21 +27,31 @@ typedef vector<pii> vpi;
 signed main()
 {
     fastIO;
-    int test;
-    cin >> test;
-    while (test--)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        int n;
-        cin >> n;
-        vi v(n);
-        for (int i = 0; i < n; i++)
-        {
-            cin >> v[i];
-        }
-        for (int i = 0; i < n; i++)
-            if (count(v.begin(), v.end(), v[i]) == 1)
-                cout << i + 1 << endl;
-    }
+        string s;
+        cin >> s;
 
+        for (int i = 0; i < s.size(); i++)
+        {
+            if (i % 2 == 0)
+            {
+                if (s[i] > 'a')
+                    s[i] = 'a';
+                else
+                    s[i] = 'b';
+            }
+            else
+            {
+                if (s[i] < 'z')
+                    s[i] = 'z';
+                else
+                    s[i] = 'y';
+            }
+        }
+        cout << s << endl;
+    }
     return 0;
 }
