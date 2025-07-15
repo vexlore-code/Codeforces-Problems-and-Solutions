@@ -33,7 +33,6 @@ signed main()
         sort(s.begin(), s.end());
         cout << s << endl;
     }
-    
-    
+
     return 0;
 }
