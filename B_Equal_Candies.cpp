@@ -27,19 +27,23 @@ typedef vector<pii> vpi;
 signed main()
 {
     fastIO;
-    int count, mn;
-    cin >> count;
-    int arr[count];
-    for (int i = 0; i < count; i++)
+    int test, n;
+    cin >> test;
+    while (test--)
     {
-        cin >> arr[i];
-        mn = min(arr[i], mn);
+        cin >> n;
+        vi v(n);
+        int mn = INT32_MAX;
+        int count = 0;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> v[i];
+            mn = min(v[i], mn);
+        }
+        for (int i = 0; i < n; i++)
+        {
+            count += v[i] - mn;
+        }
+        cout << count << endl;
     }
-    for (int j = 0; j < count; j++)
-    {
-        
-    }
-    
-
-    return 0;
 }
