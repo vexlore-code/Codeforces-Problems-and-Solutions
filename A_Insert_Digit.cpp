@@ -29,14 +29,14 @@ signed main()
     fastIO;
     int count, n, k, d;
     cin >> count;
-    while (t--)
+    while (count--)
     {
-        ll n, d;
+        int n, d;
         cin >> n >> d;
-        ll mark = 0;
+        int mark = 0;
         string s;
         cin >> s;
-        for (ll i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
         {
             if (s[i] - '0' < d && mark == 0)
             {
