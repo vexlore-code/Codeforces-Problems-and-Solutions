@@ -102,6 +102,5 @@ signed main()
             c = min(d, 9 - d) + '0';
     }
     cout << s << endl;
-    
     return 0;
 }
