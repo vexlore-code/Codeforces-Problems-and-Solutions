@@ -35,5 +35,6 @@ signed main()
     int salt = p / b;
     int ans = min({toast, limes, salt}) / n;
     cout << ans << endl;
+    
     return 0;
 }
