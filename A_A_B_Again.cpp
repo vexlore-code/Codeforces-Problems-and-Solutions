@@ -33,5 +33,6 @@ signed main()
         int sum = (n / 10) + (n % 10);
         cout << sum << endl;
     }
+    
     return 0;
 }
