@@ -41,6 +41,7 @@ signed main()
             cout << "Division 2" << endl;
         else
             cout << "Division 1" << endl;
+            
     }
     return 0;
 }
