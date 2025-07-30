@@ -40,8 +40,7 @@ signed main()
         else if (result < 1900)
             cout << "Division 2" << endl;
         else
-            cout << "Division 1" << endl;
-            
+            cout << "Division 1" << endl;            
     }
     return 0;
 }
