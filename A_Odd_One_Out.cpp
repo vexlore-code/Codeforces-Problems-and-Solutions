@@ -1,10 +1,11 @@
 /*
  "La Ilaha Illallah Muhammadur Rasulullah"
  ╔═══════════════════════════════════════╗
-             ✦ v e x l o r e ✦         	   		Created	 : 08-08-2025  23:11:38
-   "Code like a poet. Debug like a pro." 		 GitHub  : https://github.com/vexlore-code
+             ✦ v e x l o r e ✦
+   "Code like a poet. Debug like a pro."
  ╚═══════════════════════════════════════╝
-*/
+ GitHub  : https://github.com/vexlore-code
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -13,13 +14,14 @@ using namespace std;
 #define int long long
 #define endl '\n'
 
-const int MOD = 1e9+7, INF = 1e18, N = 2e5+5;
+const int MOD = 1e9 + 7, INF = 1e18, N = 2e5 + 5;
 
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 typedef vector<pii> vpi;
 /*
- ═══════════════════════════════════ MAIN CODE ═══════════════════════════════════ 
+ ═══════════════════════════════════ MAIN CODE
+ ═══════════════════════════════════
 */
 signed main()
 {
@@ -32,7 +34,7 @@ signed main()
         cin >> a >> b >> c;
         if (a == b)
         {
-            cout << c << endl;
+            cout << c << endl   ;
         }
         else if (a == c)
         {
@@ -40,7 +42,7 @@ signed main()
         }
         else
         {
-            cout << a << endl;
+            cout << a   << endl;
         }
     }
 
