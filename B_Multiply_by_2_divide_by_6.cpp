@@ -25,33 +25,32 @@ signed main()
     if (!(cin >> test)) return 0;
     while (test--)
     {
-        long long n;
+        int n;
         cin >> n;
-        int ops = 0;
+        int count = 0;
         bool ok = true;
         while (n != 1)
         {
             if (n % 6 == 0)
             {
                 n /= 6;
-                ops++;
+                count++;
             }
             else if (n % 3 == 0)
             {
                 n *= 2;
-                ops++;
+                count++;
             }
             else
             {
                 ok = false;
                 break;
             }
-            if (ops > 10000) { ok = false; break; } // safety guard
         }
         if (ok)
-            cout << ops << '\n';
+            cout << count << endl;
         else
-            cout << -1 << '\n';
+            cout << -1 << endl;
     }
     return 0;
 }
