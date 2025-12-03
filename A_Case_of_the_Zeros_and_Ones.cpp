@@ -20,7 +20,6 @@ signed main()
     fastIO;
     int a, count0 = 0, count1 = 0; cin >> a;
     string b; cin >> b;
-    sort(b.begin(), b.end());
     for (char c : b)
         if (c == '0')
             count0++;
